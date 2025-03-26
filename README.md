@@ -20,7 +20,7 @@
             // Contraseña correcta
             if (password === "1234") {  
                 sessionStorage.setItem("accesoPermitido", "true"); // Guarda acceso en la sesión
-                window.location.href = "pagina.html"; // Redirige a la página protegida
+                window.location.href = "https://chatgpt.com/?oai-dm=1"; // Redirige a la página protegida
             } else {
                 alert("❌ Contraseña incorrecta. Intenta de nuevo.");
             }
