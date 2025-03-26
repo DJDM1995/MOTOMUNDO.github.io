@@ -10,10 +10,17 @@
         button { padding: 10px 20px; cursor: pointer; }
     </style>
     <script>
+        // Bloquear copiar/pegar
+        document.addEventListener("copy", (event) => event.preventDefault());
+        document.addEventListener("paste", (event) => event.preventDefault());
+
         function verificar() {
             var password = document.getElementById("password").value;
-            if (password === "1234") {  // Reemplaza "1234" con la contraseña real
-                window.location.href = "https://google.com";  // Reemplaza con tu enlace real
+
+            // Contraseña correcta
+            if (password === "1234") {  
+                sessionStorage.setItem("accesoPermitido", "true"); // Guarda acceso en la sesión
+                window.location.href = "pagina.html"; // Redirige a la página protegida
             } else {
                 alert("❌ Contraseña incorrecta. Intenta de nuevo.");
             }
